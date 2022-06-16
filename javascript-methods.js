@@ -12,19 +12,19 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 Array.prototype.myMap = function(callbackFn) {
   
    //creating new array to store mapped values
-   let new_arr = []
+   let new_arr = [];
    for (let i = 0; i < this.length; i++) {
-      new_arr.push(callbackFn(this[i]))
+      new_arr.push(callbackFn(this[i]));
    }
   return new_arr;
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  new_array = [];
+  let new_array = [];
     for (let i = 0; i < this.length; i++){
         if (callbackFn(this[i])) { // if callback fn returns true
-          new_array.push(this[i])
+          new_array.push(this[i]);
         }
     }
   return new_array;
@@ -32,7 +32,13 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  let temp = false;
+    for (let i = 0; i < this.length; i++){
+        if (callbackFn(this[i])) {
+          temp = true;
+        }
+    }
+    return temp;
 };
 
 // EVERY //
