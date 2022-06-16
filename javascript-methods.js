@@ -59,7 +59,7 @@ Array.prototype.myReduce = function(callbackFn, InitialValue = 0) {
   let initial = InitialValue;
   
   for (let i = 0; i < this.length; i++){
-      initial  = callbackFn(initial, this[i]);
+    initial  = callbackFn(initial, this[i]);
 
   }
   return initial;
@@ -67,7 +67,12 @@ Array.prototype.myReduce = function(callbackFn, InitialValue = 0) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  // Place your code here.
+   for (let i = 0; i < this.length; i++){
+      if (this[i] == searchElement){
+        return true;
+      }
+    }
+    return false;
 };
 
 // INDEXOF //
