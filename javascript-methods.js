@@ -43,7 +43,13 @@ Array.prototype.mySome = function(callbackFn) {
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  let temp = true;
+    for (let i = 0; i < this.length; i++){
+        if (!callbackFn(this[i])) {
+            temp = false;
+        }
+    }
+    return temp;
 };
 
 // REDUCE //
