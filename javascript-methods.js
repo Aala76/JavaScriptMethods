@@ -53,8 +53,16 @@ Array.prototype.myEvery = function(callbackFn) {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+Array.prototype.myReduce = function(callbackFn, InitialValue = 0) {
+
+  let temp = 0;
+  let initial = InitialValue;
+  
+  for (let i = 0; i < this.length; i++){
+      initial  = callbackFn(initial, this[i]);
+
+  }
+  return initial;
 };
 
 // INCLUDES //
