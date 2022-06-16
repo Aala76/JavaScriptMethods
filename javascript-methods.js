@@ -106,5 +106,9 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  let new_arr = [];
+  for (const key in object){
+    new_arr.push(object[key]);
+  }
+  return new_arr;
 };
